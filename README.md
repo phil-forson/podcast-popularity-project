@@ -22,7 +22,7 @@ A Big Data analytics project investigating the relationship between **listener s
 
 ## 📂 Data Source
 
-- **Dataset:** Podcast Reviews Dataset (5 Million+ Reviews)
+- **Dataset:** [Podcast Reviews Dataset](https://www.kaggle.com/datasets/thoughtvector/podcastreviews) (5 Million+ Reviews)
 - **Format:** JSON & Parquet
 - _Note: Data files are not included in this repo due to size constraints._
 
