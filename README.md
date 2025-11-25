@@ -15,10 +15,10 @@ A Big Data analytics project investigating the relationship between **listener s
 ## 🛠️ Tech Stack
 
 - **Processing:** Apache Spark (PySpark) for distributed data processing.
-- **Database:** DuckDB for efficient local OLAP SQL queries on large JSON/Parquet files.
 - **NLP/AI:** Hugging Face Transformers (`nlptown/bert-base-multilingual-uncased-sentiment`) for multilingual sentiment analysis.
 - **Machine Learning:** Spark MLlib for Logistic Regression and feature engineering.
 - **Visualization:** Pandas & Matplotlib (integrated in notebooks).
+- **Containerization:** Docker for reproducible environment.
 
 ## 📂 Data Source
 
@@ -38,15 +38,25 @@ A Big Data analytics project investigating the relationship between **listener s
 
 ## 📓 How to Run
 
-1.  **Prerequisites:** Docker, Python 3.9+, Java (for Spark).
-2.  **Setup:**
+1.  **Prerequisites:** Docker Desktop installed.
+2.  **Build Image:**
     ```bash
-    pip install pyspark duckdb transformers torch pandas
+    docker build -t podcast-bigdata-transformers .
     ```
-3.  **Run Analysis:**
-    Open `notebooks/project.ipynb` and run all cells.
+3.  **Run Container:**
+    Start the container (Windows/Git Bash):
+    ```bash
+    winpty docker run --rm -it \
+      -p 8888:8888 \
+      -p 4040:4040 \
+      -v "$(pwd)/data:/workspace/data" \
+      -v "$(pwd)/notebooks:/workspace/notebooks" \
+      podcast-bigdata-transformers
+    ```
+4.  **Run Analysis:**
+    Open the Jupyter link (usually `http://127.0.0.1:8888`) and open `notebooks/project.ipynb`.
     - _Step 1:_ Loads data & creates virtual metadata.
-    - _Step 2:_ Runs BERT sentiment pipeline (CPU/GPU).
+    - _Step 2:_ Runs BERT sentiment pipeline.
     - _Step 3:_ Trains the predictive model.
 
 ## 📈 Results Snapshot
