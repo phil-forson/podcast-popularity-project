@@ -44,7 +44,7 @@ A Big Data analytics project investigating the relationship between **listener s
     docker build -t podcast-bigdata-transformers .
     ```
 3.  **Run Container:**
-    Start the container (Windows/Git Bash):
+    Start the container (Use **Git Bash** on Windows):
     ```bash
     winpty docker run --rm -it \
       -p 8888:8888 \
@@ -53,6 +53,7 @@ A Big Data analytics project investigating the relationship between **listener s
       -v "$(pwd)/notebooks:/workspace/notebooks" \
       podcast-bigdata-transformers
     ```
+    _Note: `winpty` is required for interactive mode in Git Bash._
 4.  **Run Analysis:**
     Open the Jupyter link (usually `http://127.0.0.1:8888`) and open `notebooks/project.ipynb`.
     - _Step 1:_ Loads data & creates virtual metadata.
