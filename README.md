@@ -24,8 +24,9 @@ A Big Data analytics project investigating the relationship between **listener s
 
 - **Dataset:** [Podcast Reviews Dataset](https://www.kaggle.com/datasets/thoughtvector/podcastreviews)
 - **Files Required:**
-  - `reviews.json` (~1.7 GB compressed / ~5.5 GB extracted)
-  - `podcasts.json` (~300 MB compressed / ~900 MB extracted)
+  - `reviews.json` (~2.2 GB)
+  - `podcasts.json` (~660 MB)
+  - `categories.json` (~370 MB)
 - **Format:** JSON
 - _Note: Data files are not included in this repo due to size constraints. Please download them from Kaggle and place them in the `data/` directory._
 
