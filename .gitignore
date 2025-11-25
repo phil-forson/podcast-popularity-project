@@ -1,0 +1,9 @@
+# ... existing code ...
+data/
+*.parquet
+*.db
+*.wal
+*.log
+*.json
+notebooks/spark-warehouse/
+notebooks/metastore_db/
